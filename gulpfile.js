@@ -17,37 +17,37 @@ gulp.task('serve', [
 
 gulp.task('copy', function() {
 	gulp.src(['./src/index.html', './src/SpecRunner.html'])
-		.pipe(gulp.dest('./dist'));
+		.pipe(gulp.dest('./docs'));
 	gulp.src(['./src/_assets/**/*.*'])
-		.pipe(gulp.dest('./dist/assets'));
+		.pipe(gulp.dest('./docs/assets'));
 	gulp.src(['./src/_data/**/*.*'])
-		.pipe(gulp.dest('./dist/data'));
+		.pipe(gulp.dest('./docs/data'));
 	gulp.src(['./src/_views/**/*.*'])
-		.pipe(gulp.dest('./dist/views'));
+		.pipe(gulp.dest('./docs/views'));
 });
 
 gulp.task('test', function() {
 	gulp.src(['./src/index.html'])
-		.pipe(gulp.dest('./dist'));
+		.pipe(gulp.dest('./docs'));
 });
 
 gulp.task('sass', function() {
 	return gulp.src('./src/_styles/main.scss')
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-		.pipe(gulp.dest('./dist/styles'));
+		.pipe(gulp.dest('./docs/styles'));
 });
 
 gulp.task('scripts', () => {
 	return gulp.src('./src/_scripts/**/*.js')
 		.pipe(concat('app.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('./dist/scripts'));
+		.pipe(gulp.dest('./docs/scripts'));
 });
 
 gulp.task('browser-sync', function() {
 	browserSync.init({
 		server: {
-			baseDir: './dist'
+			baseDir: './docs'
 		}
 	});
 });
