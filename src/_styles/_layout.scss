@@ -1,0 +1,88 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+	max-width: 1377px;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+}
+
+.half {
+	width: 50%;
+}
+
+.center {
+	text-align: center;
+}
+
+.box {
+	background-color: #fff;
+	flex: 1 1 auto;
+	margin: 15px 0;
+	overflow: auto;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.desktop {
+	&-only {
+		display: none;
+	}
+	&-hide {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.stat-section {
+		display: flex;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.box {
+		margin: 0;
+
+		& + & {
+			margin-left: 15px;
+		}
+
+		&--small {
+			width: 27%;
+		}
+
+		&--large {
+			width: 46%;
+		}
+	}
+
+	.desktop {
+		&-only {
+			display: block;
+		}
+		&-hide {
+			display: none;
+		}
+	}
+
+	.player {
+		display: flex;
+		margin-bottom: 15px;
+	}
+
+	.stat-section {
+		display: block;
+	}
+}

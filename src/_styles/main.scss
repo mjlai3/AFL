@@ -1,0 +1,49 @@
+@import './_normalize';
+@import './_layout';
+@import './_typography';
+
+body {
+	background-color: #efefef;
+}
+
+.info {
+	padding: 15px 20px;
+}
+
+.player-image {
+	vertical-align: bottom;
+}
+
+.stat-item {
+	margin-bottom: 35px;
+}
+
+.team {
+	position: relative;
+
+	&-logo {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+	}
+
+	&--adelaide {
+		background-color: #124372;
+	}
+
+	&--carlton {
+		background-color: #013a59;
+	}
+
+	&--geelong {
+		background-color: #263655;
+	}
+
+	&--north-melbourne {
+		background-color: #094b85;
+	}
+
+	&--sydney-swans {
+		background-color: #ee1e31;
+	}
+}

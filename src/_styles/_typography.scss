@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+.guernsey-number {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 32.8px;
+	font-weight: bold;
+	letter-spacing: -0.9px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 0 15px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.player-name {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 30.3px;
+	line-height: 1.08;
+	letter-spacing: 0.2px;
+	text-align: left;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.club {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16.1px;
+	line-height: 1.2;
+	letter-spacing: -0px;
+	text-align: left;
+	color: #262424;
+	display: block;
+}
+
+.stat-section-header {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 13.7px;
+	font-weight: bold;
+	line-height: 1.34;
+	letter-spacing: -0px;
+	display: block;
+	margin: 15px 0;
+}
+
+.stat-header {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 11.2px;
+	font-weight: bold;
+	letter-spacing: -0px;
+	color: #808080;
+	display: block;
+}
+
+.stat {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 43px;
+	font-weight: bold;
+	letter-spacing: -1.2px;
+	text-align: center;
+	display: block;
+}
+
+.red {
+	color: #ee1e31;
+}

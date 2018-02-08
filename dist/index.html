@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AFL Player Statistics</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body ng-app="app">
+	<div class="container" ng-controller="PlayersController">
+		<div class="player" ng-repeat="player in players">
+			<div class="box box--large">
+				<div class="team center {{getTeamClass(player.club)}}">
+					<img ng-src="./assets/Swans-rev.svg" ng-if="player.club.toLowerCase() === 'sydney swans'" class="team-logo">
+					<img ng-src="{{player.imageUrl}}" class="player-image">
+					<div class="guernsey-number">{{player.jumperNumber}}</div>
+				</div>
+				<div class="info">
+					<span class="player-name">{{player.firstname}} <strong>{{player.lastname}}</strong></span>
+					<span class="club">{{player.club.toUpperCase()}}</span>
+				</div>
+			</div>
+			<stat-box heading="TOTAL" stats="player.calculations" stat-type="total"></stat-box>
+			<stat-box heading="AVERAGE" stats="player.calculations" stat-type="average" class="desktop-only red"></stat-box>
+			<stat-box heading="BEST OF SEASON" stats="player.calculations" stat-type="best" class="desktop-hide red"></stat-box>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+	<script type="text/javascript" src="./scripts/app.js"></script>
+</body>
+</html>
